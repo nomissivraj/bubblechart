@@ -77,20 +77,12 @@ var bblChart = {};
             .style("stroke", circle.strokeColor);
     };
 
-    self.reset = function (target) {
-        let chartInner = d3.select(target + ' .chartInner');
-        chartInner.selectAll("svg").remove();
-        chartInner.selectAll("circle").remove();
-    };
-
     self.positionText = function (inner, item, circle, container) {
         inner.selectAll("svg").append("text")
             .text((d) => {
                 return item.name;
             })
-            .attr("data-circlename", () => {
-                return item.idstring;
-            })
+            .attr("data-circlename", item.idstring)
             .attr("x", () => {
                 return self.calcPosition(circle.x, circle.r, container);
             })
@@ -126,13 +118,14 @@ var bblChart = {};
             .attr("d", self.describeArc(x, y, r, sAngle, eAngle))
             .attr("fill", "rgba(0,0,0,.2)")
             .attr("data-toggle", "tooltip")
+            .attr("data-circlename", item.idstring)
             .attr("title", function () {
                 if (!text) {
-                    return item.name + " - "+ c.sliceText +": " + c.slice + "%";
+                    return item.name + " - " + c.sliceText + ": " + c.slice + "%";
                 } else {
                     return c.sliceText + " : " + c.slice + " % ";
                 }
-                
+
             });
     };
 
@@ -164,6 +157,12 @@ var bblChart = {};
         return arc;
     };
 
+    self.reset = function (target) {
+        let chartInner = d3.select(target + ' .chartInner');
+        chartInner.selectAll("svg").remove();
+        chartInner.selectAll("circle").remove();
+        chartInner.selectAll("path").remove();
+    };
 
 })(bblChart);
 
