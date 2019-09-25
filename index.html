@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" rel="javascript" src="dependencies/d3.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body style="width: 800px; padding: 40px;">
+    <div class="container">
+        <div id="chartContainer" class="chartContainer">
+            <div class="chartInner"></div>
+            <div id="labelX">
+                <h6>Market Difficulty/Risk</h6>
+            </div>
+            <div id="labelY">
+                <h6>Organizational Difficulty/Profit Impact</h6>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container">
+        <div id="chartContainer1" class="chartContainer1">
+            <div class="chartInner"></div>
+            <div id="labelX">
+                <h6>Market Difficulty/Risk</h6>
+            </div>
+            <div id="labelY">
+                <h6>Organizational Difficulty/Profit Impact</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="chartContainer2" class="chartContainer1">
+            <div class="chartInner"></div>
+            <div id="labelX">
+                <h6>Market Difficulty/Risk</h6>
+            </div>
+            <div id="labelY">
+                <h6>Organizational Difficulty/Profit Impact</h6>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- <script type="text/javascript" src="bblchart.js"></script> -->
+<script type="text/javascript" src="js/bblchart.js"></script>
+<script>
+    var chart1 = [
+        {
+            idstring: "portfolio-1",
+            name: "Services",
+            output: "Services output on portfolio thing",
+            circles: [{
+                type: "actual",
+                x: 60,
+                y: 50,
+                r: null,
+                fill: " rgb(255, 223, 158)",
+                strokeColor: "rgb(92, 113, 192)"
+            },
+            {
+                type: "behaviour",
+                x: 50,
+                y: 20,
+                r: 60,
+                fill: "rgb(170, 119, 180)",
+                strokeColor: "rgb(80, 32, 117)"
+            },
+            {
+                type: "target",
+                x: 70,
+                y: 30,
+                r: 60,
+                fill: "rgb(98, 189, 244)",
+                strokeColor: "rgb(92, 113, 192)"
+            }
+            ]
+        },
+        {
+            idstring: "portfolio-2",
+            name: "Clients",
+            output: "Clients output on portfolio thing",
+            circles: [{
+                type: "actual",
+                x: 30,
+                y: 90,
+                r: null,
+                fill: " rgb(255, 223, 158)",
+                strokeColor: "rgb(92, 113, 192)"
+            },
+            {
+                type: "behaviour",
+                x: 10,
+                y: 10,
+                r: 60,
+                fill: "rgb(170, 119, 180)",
+                strokeColor: "rgb(80, 32, 117)"
+            },
+            {
+                type: "target",
+                x: 80,
+                y: 20,
+                r: 60,
+                fill: "rgb(98, 189, 244)",
+                strokeColor: "rgb(92, 113, 192)"
+            }
+            ]
+        }
+    ]
+
+    var chart2 = [
+        {
+            idstring: "portfolio-1",
+            name: "Services",
+            output: "Services output on portfolio thing",
+            circles: [{
+                type: "actual",
+                slice: 25,
+                sliceText: "Projected Savings",
+                x: 60,
+                y: 50,
+                r: 100,
+                fill: " rgb(255, 223, 158)",
+                strokeColor: "rgb(92, 113, 192)"
+            }
+            ]
+        },
+        {
+            idstring: "portfolio-2",
+            name: "Clients",
+            output: "Clients output on portfolio thing",
+            circles: [{
+                type: "actual",
+                slice: 75,
+                sliceText: "Projected Savings",
+                x: 30,
+                y: 90,
+                r: 65,
+                fill: " rgb(255, 223, 158)",
+                strokeColor: "rgb(92, 113, 192)"
+            }
+            ]
+        },
+        {
+            idstring: "portfolio-3",
+            name: "Test",
+            output: "Test output on portfolio thing",
+            circles: [{
+                type: "actual",
+                slice: 33,
+                sliceText: "Projected Savings",
+                x: 50,
+                y: 70,
+                r: null,
+                fill: " rgb(255, 223, 158)",
+                strokeColor: "rgb(92, 113, 192)"
+            }
+            ]
+        }
+    ]
+    bblChart.init('#chartContainer', chart1, true);
+    bblChart.init('#chartContainer1', chart2, true);
+    bblChart.init('#chartContainer2', chart1);
+</script>
+
+</html>

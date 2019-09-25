@@ -1,0 +1,48 @@
+.chartContainer {
+    background-image: url(chartBG.svg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.chartContainer {
+    margin-bottom: 20px;
+}
+
+.chartInner,
+.chartInner1 {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+}
+
+.chartContainer svg,
+.chartContainer1 svg {
+    width: 100%;
+    height: 100%;
+}
+
+#labelX {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    width: 100%;
+}
+
+#labelY {
+    text-align: center;
+    width: 100%;
+}
+
+h6,
+.h6 {
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+    width: 700px;
+    padding: 40px;
+}
