@@ -1,5 +1,5 @@
 .chartContainer {
-    background-image: url(chartBG.svg);
+    background-image: url(../img/chartBG.svg);
     width: 100%;
     height: 100%;
     position: relative;
